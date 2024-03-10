@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bn87cecg1472s"]
 
-[ext_resource type="Script" path="res://amplitude_controller.gd" id="1_4pn75"]
+[ext_resource type="Script" path="res://interfaces/amplitude_controller.gd" id="1_4pn75"]
 
 [node name="AmplitudeController" type="VBoxContainer"]
 anchors_preset = -1

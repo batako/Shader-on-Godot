@@ -2,7 +2,7 @@ shader_type canvas_item;
 
 uniform float time_factor = 2.0;
 uniform vec2 amplitude = vec2(10.0, 5.0);
-uniform float alpha = 0.7;
+uniform float alpha = 0.5;
 
 void vertex() {
 	// 回転
