@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://da38aa4f5qbwu"]
 
-[ext_resource type="Script" path="res://scenes/amplitude.gd" id="1_ahive"]
+[ext_resource type="Script" path="res://scenes/amplitude/amplitude.gd" id="1_ahive"]
 [ext_resource type="Shader" path="res://shaders/amplitude.gdshader" id="2_agwr4"]
 [ext_resource type="Texture2D" uid="uid://c4gx6b6xikrrn" path="res://assets/images/icon.svg" id="3_6g8t8"]
 [ext_resource type="PackedScene" uid="uid://bn87cecg1472s" path="res://interfaces/amplitude_controller.tscn" id="4_jj8v8"]

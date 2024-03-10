@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsho6ve25oaya"]
+
+[ext_resource type="Shader" path="res://shaders/water.gdshader" id="1_q621l"]
+[ext_resource type="Texture2D" uid="uid://curijat0nhawf" path="res://assets/images/water.png" id="1_utqud"]
+[ext_resource type="Script" path="res://scenes/warter/water.gd" id="2_ii7ji"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f40a2"]
+shader = ExtResource("1_q621l")
+shader_parameter/repeat_factor = Vector2(1, 1)
+shader_parameter/wave_strength = 0.02
+shader_parameter/wave_speed = 2.0
+shader_parameter/wave_frequency = 10.0
+
+[node name="Water" type="Sprite2D"]
+material = SubResource("ShaderMaterial_f40a2")
+position = Vector2(576, 324)
+scale = Vector2(4.5, 2.53125)
+texture = ExtResource("1_utqud")
+script = ExtResource("2_ii7ji")
+
+[connection signal="item_rect_changed" from="." to="." method="_on_item_rect_changed"]
