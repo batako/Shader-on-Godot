@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn87cecg1472s"]
+
+[ext_resource type="Script" path="res://amplitude_controller.gd" id="1_4pn75"]
+
+[node name="AmplitudeController" type="VBoxContainer"]
+anchors_preset = -1
+anchor_right = 0.184
+anchor_bottom = 0.085
+offset_right = 0.0319824
+offset_bottom = -0.0800006
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+script = ExtResource("1_4pn75")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Amplitude:"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="."]
+layout_mode = 2
+
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]

@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://da38aa4f5qbwu"]
+
+[ext_resource type="Shader" path="res://2d.gdshader" id="1_ar658"]
+[ext_resource type="Script" path="res://main.gd" id="1_u580s"]
+[ext_resource type="Texture2D" uid="uid://c4gx6b6xikrrn" path="res://icon.svg" id="2_pa5kk"]
+[ext_resource type="PackedScene" uid="uid://bn87cecg1472s" path="res://amplitude_controller.tscn" id="3_u2ff3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rt0ro"]
+shader = ExtResource("1_ar658")
+shader_parameter/time_factor = 2.0
+shader_parameter/amplitude = Vector2(10, 5)
+shader_parameter/alpha = 0.7
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_u580s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_rt0ro")
+position = Vector2(539, 288)
+texture = ExtResource("2_pa5kk")
+
+[node name="AmplitudeController" parent="." instance=ExtResource("3_u2ff3")]
+offset_left = 458.0
+offset_top = 369.0
+offset_right = 635.0
+offset_bottom = 408.0
+
+[connection signal="amplitude_changed" from="AmplitudeController" to="." method="_on_amplitude_controller_amplitude_changed"]
